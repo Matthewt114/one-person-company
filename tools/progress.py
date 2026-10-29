@@ -203,7 +203,7 @@ def main():
             d.rounded_rectangle([cx, cy, cx + cw, cy + ch], radius=12, fill=C_CARD,
                                 outline=C_LINE, width=1)
             tc = C_GRAY
-        mark = "✓" if ok else "○"
+        mark = "√" if ok else "○"
         d.text((cx + 16, cy + 14), mark, font=font(16, True), fill=tc)
         lines = wrap(d, label, f_ms, cw - 70)[:3]
         for j, ln in enumerate(lines):
