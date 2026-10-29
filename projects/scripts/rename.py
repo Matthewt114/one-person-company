@@ -5,6 +5,7 @@ import sys
 parser = argparse.ArgumentParser(description="批量重命名图片")
 parser.add_argument("folder", help="要处理的文件夹")
 parser.add_argument("prefix", help="新文件名前缀，例如 photo")
+parser.add_argument("--dry-run", action="store_true", help="只显示会怎么改，不真的改名")
 args = parser.parse_args()
 
 if not os.path.isdir(args.folder):
@@ -21,6 +22,9 @@ for name in files:
         new_name = f"{args.prefix}-{count:03d}{ext}"
         old_path = os.path.join(args.folder, name)
         new_path = os.path.join(args.folder, new_name)
-        os.rename(old_path, new_path)
-        print(f"{name}  ->  {new_name}")
+        if args.dry_run:
+            print(f"[演练] {name}  ->  {new_name}")
+        else:
+            os.rename(old_path, new_path)
+            print(f"{name}  ->  {new_name}")
         count += 1
