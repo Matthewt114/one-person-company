@@ -14,7 +14,10 @@ if not os.path.isdir(args.folder):
     print(f"找不到文件夹：{args.folder}")
     sys.exit(1)
 
-files = sorted(os.listdir(args.folder))
+files = sorted(
+    os.listdir(args.folder),
+    key=lambda n: os.path.getmtime(os.path.join(args.folder, n)),
+)
 print(f"{args.folder} 里有 {len(files)} 个东西")
 
 count = 1
