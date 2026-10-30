@@ -4,17 +4,15 @@
 这是"客户"发来的原始版本——在他电脑上跑不起来，让你帮忙看看。
 """
 import csv
+import os
 
-DATA = r"D:\客户资料\销售数据\sales.csv"
-
+DATA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "sales.csv")
 
 def load(path):
-    with open(path, "r") as f:
+   with open(path, "r", encoding="utf-8") as f:
         return list(csv.DictReader(f))
-
-
 def to_number(text):
-    return int(text)
+      return int(text.replace(",", ""))
 
 
 def main():
