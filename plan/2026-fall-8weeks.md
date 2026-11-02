@@ -58,10 +58,10 @@
 **目标**：程序出错时给人一句人话，而不是甩一堆 traceback。
 
 **任务**
-- [ ] 读自己现在的 `rename.py`，找出三个"可能炸"的地方（目录不存在、文件名重复、权限不足）
-- [ ] 用 `try / except` 包住它们，出错时打印一句人话 + 退出码 1
-- [ ] 加一个 `--verbose` 开关：打开时打印每一步在哪
-- [ ] 改完跑三种情况：正常、目录不存在、目标名已存在
+- [x] 读自己现在的 `rename.py`，找出三个"可能炸"的地方（目录不存在、文件名重复、权限不足）
+- [x] 用 `try / except` 包住它们，出错时打印一句人话 + 退出码 1
+- [x] 加一个 `--verbose` 开关：打开时打印每一步在哪
+- [x] 改完跑三种情况：正常、目录不存在、目标名已存在
 
 **看什么**：Python 官方教程「错误和异常」<https://docs.python.org/zh-cn/3/tutorial/errors.html>
 
@@ -76,11 +76,11 @@
 **目标**：先写一个会失败的测试，再让它通过。
 
 **任务**
-- [ ] 装 pytest：`pip install pytest`
-- [ ] 在 `projects/scripts/` 建 `test_rename.py`，先写 3 个用例（改名前、改名后、错误输入）
-- [ ] 跑 `pytest`，看它先红
-- [ ] 改代码让它变绿
-- [ ] 把"先红后绿"的过程截图或写进笔记
+- [x] 装 pytest：`pip install pytest`
+- [x] 在 `projects/scripts/` 建 `test_rename.py`，先写 3 个用例（改名前、改名后、错误输入）
+- [x] 跑 `pytest`，看它先红
+- [x] 改代码让它变绿
+- [x] 把"先红后绿"的过程截图或写进笔记
 
 **看什么**：pytest 官方入门 <https://docs.pytest.org/en/stable/getting-started.html>
 

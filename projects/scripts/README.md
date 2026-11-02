@@ -27,6 +27,9 @@ python rename.py "F:\照片" photo
 # 按修改日期改名：2026-10-29-001.jpg …
 python rename.py "F:\照片" --by-date
 
+# 打印更多过程信息
+python rename.py "F:\照片" --verbose
+
 # 只演练，不真的改名（强烈建议先跑这个）
 python rename.py "F:\照片" --by-date --dry-run
 ```

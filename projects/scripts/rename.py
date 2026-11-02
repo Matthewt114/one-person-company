@@ -13,6 +13,7 @@ def parse_args(argv=None):
     parser.add_argument("prefix", nargs="?", default="photo", help="新文件名前缀，默认 photo")
     parser.add_argument("--by-date", action="store_true", help="按文件修改日期命名")
     parser.add_argument("--dry-run", action="store_true", help="只显示会怎么改，不真的改名")
+    parser.add_argument("--verbose", action="store_true", help="打印更多过程信息")
     return parser.parse_args(argv)
 
 
@@ -103,11 +104,19 @@ def main(argv=None):
             print('不能用的字符：\\ / : * ? " < > |')
             return 1
 
+    if args.verbose:
+        print(f"[verbose] 目录：{os.path.abspath(args.folder)}")
+        print(f"[verbose] 命名方式：{'按修改日期' if args.by_date else '前缀 ' + args.prefix}")
+        print("[verbose] 排序依据：文件修改时间")
+
     names = list_images(args.folder)
     print(f"{args.folder} 里有 {len(names)} 张图片")
 
     # ③ 先算后改
     plan = build_plan(args.folder, names, prefix=args.prefix, by_date=args.by_date)
+    if args.verbose:
+        print(f"[verbose] 算出 {len(plan)} 条改名计划")
+
     problems = find_conflicts(args.folder, plan)
     if problems:
         print("\n发现冲突，整个任务取消（一个文件都没有改动）：")
