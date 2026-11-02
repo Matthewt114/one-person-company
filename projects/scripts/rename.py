@@ -94,6 +94,9 @@ def main(argv=None):
 
     # ② 前缀里不能有文件名非法字符
     if not args.by_date:
+        if not args.prefix:
+            print("前缀不能为空。如果不想加前缀，用 --by-date。")
+            return 1
         bad = ILLEGAL_CHARS & set(args.prefix)
         if bad:
             print("前缀里有不能用在文件名里的字符：" + " ".join(sorted(bad)))
