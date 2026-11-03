@@ -95,10 +95,10 @@
 **目标**：把"一堆数字"变成"能回答问题的结构"。
 
 **任务**
-- [ ] 学 `dict` / `list` / `set` 各自的适用场景
-- [ ] 写一个 CSV 统计工具：读一个 CSV，输出"每列的平均/最大/最小/空值数"
-- [ ] 处理脏数据：空行、空值、带逗号的数字（上周踩过）
-- [ ] 用 `collections.Counter` 或 `defaultdict` 至少一处
+- [x] 学 `dict` / `list` / `set` 各自的适用场景
+- [x] 写一个 CSV 统计工具：读一个 CSV，输出"每列的平均/最大/最小/空值数"
+- [x] 处理脏数据：空行、空值、带逗号的数字（上周踩过）
+- [x] 用 `collections.Counter` 或 `defaultdict` 至少一处
 
 **产出**：`projects/scripts/csv_stat.py`
 
