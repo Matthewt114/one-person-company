@@ -42,3 +42,11 @@ def test_summarize_reads_columns(tmp_path):
     assert report[0]["kind"] == "number"
     assert report[0]["avg"] == 1.5
     assert report[1]["kind"] == "text"
+
+    
+def test_summarize_empty_file(tmp_path):
+    """只有表头、没有数据的 CSV，应该返回空列表，不是崩溃"""
+    csv_file = tmp_path / "empty.csv"
+    csv_file.write_text("a,b\n", encoding="utf-8")
+
+    assert csv_stat.summarize(str(csv_file)) == []

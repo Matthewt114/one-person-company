@@ -22,6 +22,9 @@ def summarize(path):
     with open(path, encoding="utf-8", newline="") as f:
         rows = list(csv.DictReader(f))
 
+    if not rows:
+        return []
+
     report = []
     for col in rows[0].keys():
         values = [row[col] for row in rows]
@@ -67,6 +70,9 @@ def print_report(report):
 
 def main():
     report = summarize(DATA)
+    if not report:
+        print(f"{DATA} 里没有数据行")
+        return 1
     print(f"读了 {report[0]['total']} 行，列名：{[r['column'] for r in report]}")
     print()
     print_report(report)
