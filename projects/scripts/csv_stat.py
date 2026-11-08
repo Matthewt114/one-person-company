@@ -56,6 +56,7 @@ def summarize(path):
 
 
 def print_report(report):
+    print("-" * 50)
     for item in report:
         col = item["column"]
         if item["kind"] == "number":
