@@ -127,11 +127,11 @@
 **目标**：敢开分支、敢回滚、敢改历史之前先看清楚。
 
 **任务**
-- [ ] 学 `git branch` / `checkout -b` / `merge`
-- [ ] 在分支上做一个实验，合回主干
-- [ ] 学 `git log --graph` / `git show` / `git diff HEAD~1`
-- [ ] 故意制造一次冲突，手动解决，记下过程
-- [ ] 把这次操作写成 `learn/git.md`
+- [x] 学 `git branch` / `checkout -b` / `merge`
+- [x] 在分支上做一个实验，合回主干
+- [x] 学 `git log --graph` / `git show` / `git diff HEAD~1`
+- [x] 故意制造一次冲突，手动解决，记下过程
+- [x] 把这次操作写成 `learn/git.md`
 
 **产出**：`learn/git.md` + 一条能看懂的分支历史
 
