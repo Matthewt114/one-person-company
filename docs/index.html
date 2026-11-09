@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>rename.py · 批量重命名图片</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>rename.py</h1>
+    <p class="lead">把一堆乱七八糟的图片，按序号或日期改整齐。</p>
+
+    <section>
+      <h2>问题</h2>
+      <p>手机连电脑导出一次，200 张照片，名字从 <code>IMG_0001.jpg</code> 排到 <code>IMG_0200.jpg</code>。</p>
+      <p>这些名字<strong>不带任何信息</strong>。想找某天拍的那几张，只能一张张点开看；想按时间排序，系统排的是名字，不是日期。</p>
+      <p>手动改名要一张一张来：右键 → 重命名 → 输入 → 回车。<strong>200 张基本等于放弃。</strong></p>
+    </section>
+
+    <section>
+      <h2>用法</h2>
+      <pre><code>python rename.py "F:\照片" 旅行        # 按序号：旅行-001.jpg
+python rename.py "F:\照片" --by-date   # 按日期：2026-10-29-001.jpg
+python rename.py "F:\照片" --by-date --dry-run   # 只演练，不改名</code></pre>
+      <p>先带 <code>--dry-run</code> 跑一遍，看清每一行 <code>旧名 -&gt; 新名</code>，去掉它再真跑。</p>
+    </section>
+
+    <section>
+      <h2>为什么安全</h2>
+      <p>批量操作最大的坑不是报错，是<strong>改了一半</strong>。所以它分三步：</p>
+      <ol>
+        <li><strong>算</strong>：把每个文件的新名字全算出来，不碰磁盘</li>
+        <li><strong>查</strong>：检查目标名是否被占用、是否有两个文件撞名</li>
+        <li><strong>改</strong>：全部通过了才动手</li>
+      </ol>
+      <p>有任何冲突，<strong>一个文件都不改</strong>，直接列出问题让你先处理。</p>
+    </section>
+
+    <footer>
+      <p>
+        源码与更多笔记：<a href="https://github.com/Matthewt114/one-person-company">github.com/Matthewt114/one-person-company</a>
+      </p>
+      <p class="muted">用 Python 写的小工具 · 2026</p>
+    </footer>
+  </main>
+</body>
+</html>
