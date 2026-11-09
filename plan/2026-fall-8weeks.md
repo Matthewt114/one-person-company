@@ -144,10 +144,10 @@
 **目标**：一个公网能打开的页面。
 
 **任务**
-- [ ] 写一个静态页：HTML + CSS，介绍你的一个脚本（内容就是你的 README）
-- [ ] 推到 GitHub，开 GitHub Pages
-- [ ] 确认手机也能打开
-- [ ] 在 README 里放链接
+- [x] 写一个静态页：HTML + CSS，介绍你的一个脚本（内容就是你的 README）
+- [x] 推到 GitHub，开 GitHub Pages
+- [x] 确认手机也能打开
+- [x] 在 README 里放链接
 
 **产出**：一个真实 URL
 

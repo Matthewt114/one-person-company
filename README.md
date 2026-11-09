@@ -7,6 +7,7 @@
 **当前阶段**：大一上 · 环境与手感
 **在做什么**：[plan/2026-fall-8weeks.md](plan/2026-fall-8weeks.md) · **做到哪了**：[docs/进度.md](docs/进度.md)
 **每周投入**：5.5 小时（项目 2 + 基础 2 + 写作 1 + 信息 0.5）
+**在线版**：<https://matthewt114.github.io/one-person-company/> —— rename.py 的介绍页
 
 ---
 
