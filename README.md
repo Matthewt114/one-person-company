@@ -31,7 +31,7 @@
 |---|---|---|
 | **我自己**（每天开工） | [docs/进度.md](docs/进度.md) → 看"下次从这里继续" | 2 分钟 |
 | **路过的开发者** | [learn/](learn/) 和 [postmortems/](postmortems/) | 10 分钟 |
-| **找实习时的面试官** | [projects/](projects/) 和 [postmortems/001](postmortems/001-sorted-bug.md) | 5 分钟 |
+| **找实习时的面试官** | [projects/](projects/) · [复盘 001](postmortems/001-sorted-bug.md) · [复盘 002](https://zhuanlan.zhihu.com/p/2103512990985216291)（知乎） | 5 分钟 |
 
 > 三个入口都指向同一件事：**这个人真的动过手。**
 
