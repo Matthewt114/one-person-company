@@ -160,10 +160,10 @@
 **目标**：把第 1–5 周里最疼的一次写下来。
 
 **任务**
-- [ ] 从 `log/blocked.md` 里挑一条卡得最久的
-- [ ] 按 [六段式模板](../postmortems/000-template.md) 写
-- [ ] 标题带具体症状，正文有 diff 和验证
-- [ ] 发到 CSDN 或知乎
+- [x] 从 `log/blocked.md` 里挑一条卡得最久的
+- [x] 按 [六段式模板](../postmortems/000-template.md) 写
+- [x] 标题带具体症状，正文有 diff 和验证
+- [x] 发到 CSDN 或知乎
 
 **产出**：1 篇公开复盘
 
